@@ -1,0 +1,7 @@
+pypi\_sphinx\_flexlate\_example package
+=======================================
+
+.. automodule:: pypi_sphinx_flexlate_example
+   :members:
+   :undoc-members:
+   :show-inheritance:

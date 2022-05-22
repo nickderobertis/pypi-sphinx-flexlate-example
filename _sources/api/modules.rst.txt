@@ -1,0 +1,7 @@
+pypi_sphinx_flexlate_example
+============================
+
+.. toctree::
+   :maxdepth: 4
+
+   pypi_sphinx_flexlate_example
