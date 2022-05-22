@@ -11,5 +11,26 @@
       "render_relative_root_in_template": "{{ repo_name }}"
     }
   ],
-  "applied_templates": []
+  "applied_templates": [
+    {
+      "name": "copier-pypi-sphinx-flexlate",
+      "data": {
+        "author_email": "derobertis.nick@gmail.com",
+        "full_name": "Pypi Sphinx Flexlate Example",
+        "google_analytics_id": "",
+        "install_packages": "",
+        "logo_url": "",
+        "main_branch_name": "main",
+        "package_author": "Nick DeRobertis",
+        "package_directory": "pypi_sphinx_flexlate_example",
+        "package_name": "pypi-sphinx-flexlate-example",
+        "repo_name": "pypi-sphinx-flexlate-example",
+        "repo_username": "nickderobertis",
+        "short_description": "Example output for https://github.com/nickderobertis/copier-pypi-sphinx-flexlate"
+      },
+      "version": "6973599da307d26ba8ce18b52b3bb032",
+      "add_mode": "local",
+      "root": "."
+    }
+  ]
 }
