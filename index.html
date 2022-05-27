@@ -329,6 +329,8 @@ upgrades will often have breaking changes.</p>
 to use the virtual environment. Make your changes and then run <code class="docutils literal notranslate"><span class="pre">nox</span></code> to run formatting,
 linting, and tests.</p>
 <p>Develop documentation by running <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">docs</span></code> to start up a dev server.</p>
+<p>To run tests only, run <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">test</span></code>. You can pass additional arguments to pytest
+by adding them after <code class="docutils literal notranslate"><span class="pre">--</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">test</span> <span class="pre">--</span> <span class="pre">-k</span> <span class="pre">test_something</span></code>.</p>
 </section>
 <section id="author">
 <h2 id="author">Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h2>
