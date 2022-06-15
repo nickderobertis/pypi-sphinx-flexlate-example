@@ -1,3 +1,4 @@
+import os
 import shutil
 from pathlib import Path
 from typing import Literal
@@ -107,7 +108,6 @@ def docs(session):
     session.chdir("docsrc")
     session.run("make", "github")
     if session.interactive:
-        session.run("ls", "-l")
         session.run("bash", "./dev-server.sh")
 
 
@@ -131,25 +131,27 @@ def _venv_exists(venv_name: VenvName):
 
 @nox.session(python=False)
 def venv(session):
+    # First argument is one of "delete", "update", "create"
     # Second argument is the name of the venv
-    # Third argument is one of "delete", "update"
     if len(session.posargs) < 2:
         raise ValueError(
-            f"Must supply first venv name and then action (delete or update), got {session.posargs}"
+            f"Must supply first action (delete, update, create), then venv name, got {session.posargs}"
         )
-    venv_name = session.posargs[0]
-    action = session.posargs[1]
+    action = session.posargs[0]
+    venv_name = session.posargs[1]
     if action == "delete":
         _delete_venv(venv_name)
     elif action == "update":
         _update_venv(session, venv_name)
+    elif action == "create":
+        _setup_venv(session, venv_name)
     else:
         raise ValueError(f"Action must be delete or update, got {action}")
 
 
 def _run_in_venv(session, venv_name: VenvName, *args):
     venv_dir = _venv_path(venv_name)
-    venv_command = f"{venv_dir}/bin/{args[0]}"
+    venv_command = os.path.sep.join((str(venv_dir), "bin", args[0]))
     new_args = [venv_command, *args[1:]]
     session.run(*new_args)
 
