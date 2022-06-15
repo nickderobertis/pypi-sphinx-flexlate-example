@@ -20,15 +20,22 @@ runs:
       with:
         path: ${{ env.pythonLocation }}
         key: ${{ env.pythonLocation }}-${{ hashFiles('*-requirements.txt') }}
+    - uses: actions/cache@v3
+      id: cache-venvs
+      name: Cache venvs
+      with:
+        path: $HOME/.venvs
+        key: ${{ env.pythonLocation }}-venvs-${{ hashFiles('*-requirements.txt') }}
     - name: Install main dependencies
       shell: bash
       run: |
         pipenv --python ${{ matrix.python-version }} sync
-    - name: Install linting dependencies
-      shell: bash
-      run: |
-        pip install -r lint-requirements.txt
     - name: Install formatting dependencies
       shell: bash
       run: |
         pip install -r format-requirements.txt
+    - name: Create venvs
+      shell: bash
+      if: steps.cache-venvs.outputs.cache-hit != "true"
+      run: |
+        nox -s venv -- create lint
