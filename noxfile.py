@@ -69,7 +69,7 @@ def strip_imports(session):
         "--remove-all-unused-imports",
         "--in-place",
         "--recursive",
-        "--exclude=test*,__init__.py",
+        "--exclude=test*,__init__.py,venv*,build*,dist*,node_modules*",
         *files,
     )
     if session.interactive:
@@ -82,8 +82,9 @@ def strip_imports(session):
 
 @nox.session
 def test(session):
+    reqs_path = _tests_req_path(session)
     session.install(
-        "-r", "test-requirements.txt", "--upgrade", "--upgrade-strategy", "eager"
+        "-r", reqs_path, "--upgrade", "--upgrade-strategy", "eager"
     )
     session.install(".")
     session.run("pytest", *session.posargs)
@@ -91,8 +92,9 @@ def test(session):
 
 @nox.session
 def test_coverage(session):
+    reqs_path = _tests_req_path(session)
     session.install(
-        "-r", "test-requirements.txt", "--upgrade", "--upgrade-strategy", "eager"
+        "-r", reqs_path, "--upgrade", "--upgrade-strategy", "eager"
     )
     session.install(".")
     session.run("pytest", "--cov=./", "--cov-report=xml")
@@ -104,6 +106,10 @@ def docs(session):
     session.run("make", "github")
     if session.interactive:
         session.run("bash", "./dev-server.sh")
+
+
+def _tests_req_path(session) -> str:
+    return session.run("mvenv", "run", "global", "python", "reqs_path.py", "test", external=True, silent=True).strip()
 
 
 def _setup_venv(session, venv_name: str):
