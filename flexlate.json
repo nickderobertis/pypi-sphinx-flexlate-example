@@ -4,7 +4,7 @@
       "name": "copier-pypi-sphinx-flexlate",
       "path": "/home/runner/work/copier-pypi-sphinx-flexlate/copier-pypi-sphinx-flexlate/copier-pypi-sphinx-flexlate",
       "type": "copier",
-      "version": "a0c9b7482c78f79b0450b6825e22c0ac",
+      "version": "0683eecf4422760768bab9fc3ad5056f",
       "git_url": null,
       "target_version": null,
       "render_relative_root_in_output": ".",
@@ -40,7 +40,7 @@
         "logo_url": "",
         "install_packages": ""
       },
-      "version": "a0c9b7482c78f79b0450b6825e22c0ac",
+      "version": "0683eecf4422760768bab9fc3ad5056f",
       "add_mode": "local",
       "root": "."
     }
