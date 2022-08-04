@@ -57,6 +57,8 @@ Develop documentation by running `just docs` to start up a dev server.
 To run tests only, run `just test`. You can pass additional arguments to pytest,
 e.g. `just test -k test_something`.
 
+Prior to committing, you can run `just` with no arguments to run all the checks.
+
 ## Author
 
 Created by Nick DeRobertis. MIT License.
