@@ -47,7 +47,7 @@
   
   
   
-    <title>Welcome to Pypi Sphinx Flexlate Example documentation! &#8212; pypi-sphinx-flexlate-example 0.46.0 documentation</title>
+    <title>Welcome to Pypi Sphinx Flexlate Example documentation! &#8212; pypi-sphinx-flexlate-example 0.48.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/material.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -90,7 +90,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="#" title="pypi-sphinx-flexlate-example 0.46.0 documentation"
+        <a href="#" title="pypi-sphinx-flexlate-example 0.48.0 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#xe869</i>
@@ -176,7 +176,7 @@
   <nav class="md-tabs" data-md-component="tabs">
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="#" class="md-tabs__link">pypi-sphinx-flexlate-example 0.46.0 documentation</a></li>
+          <li class="md-tabs__item"><a href="#" class="md-tabs__link">pypi-sphinx-flexlate-example 0.48.0 documentation</a></li>
       </ul>
     </div>
   </nav>
@@ -188,13 +188,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="#" title="pypi-sphinx-flexlate-example 0.46.0 documentation" class="md-nav__button md-logo">
+    <a href="#" title="pypi-sphinx-flexlate-example 0.48.0 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#xe869</i>
       
     </a>
     <a href="#"
-       title="pypi-sphinx-flexlate-example 0.46.0 documentation">pypi-sphinx-flexlate-example</a>
+       title="pypi-sphinx-flexlate-example 0.48.0 documentation">pypi-sphinx-flexlate-example</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/nickderobertis/pypi-sphinx-flexlate-example" title="Go to repository" class="md-source" data-md-source="github">
@@ -333,12 +333,12 @@ upgrades will often have breaking changes.</p>
 <li><p><a class="reference external" href="https://pypa.github.io/pipx/installation/">pipx</a></p></li>
 <li><p><a class="reference external" href="https://direnv.net/docs/installation.html">direnv</a></p></li>
 </ul>
-<p>Then clone the repo and run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code> and <code class="docutils literal notranslate"><span class="pre">pipenv</span> <span class="pre">sync</span></code>. Run <code class="docutils literal notranslate"><span class="pre">pipenv</span> <span class="pre">shell</span></code>
-to use the virtual environment. Make your changes and then run <code class="docutils literal notranslate"><span class="pre">nox</span></code> to run formatting,
+<p>Then clone the repo and run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code> and <code class="docutils literal notranslate"><span class="pre">mvenv</span> <span class="pre">sync</span> <span class="pre">dev</span></code>. Make your changes and then run <code class="docutils literal notranslate"><span class="pre">just</span></code> to run formatting,
 linting, and tests.</p>
-<p>Develop documentation by running <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">docs</span></code> to start up a dev server.</p>
-<p>To run tests only, run <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">test</span></code>. You can pass additional arguments to pytest
-by adding them after <code class="docutils literal notranslate"><span class="pre">--</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">test</span> <span class="pre">--</span> <span class="pre">-k</span> <span class="pre">test_something</span></code>.</p>
+<p>Develop documentation by running <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">docs</span></code> to start up a dev server.</p>
+<p>To run tests only, run <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">test</span></code>. You can pass additional arguments to pytest,
+e.g. <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">test</span> <span class="pre">-k</span> <span class="pre">test_something</span></code>.</p>
+<p>Prior to committing, you can run <code class="docutils literal notranslate"><span class="pre">just</span></code> with no arguments to run all the checks.</p>
 </section>
 <section id="author">
 <h2 id="author">Author<a class="headerlink" href="#author" title="Permalink to this heading">¶</a></h2>
@@ -418,7 +418,7 @@ by adding them after <code class="docutils literal notranslate"><span class="pre
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.1.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
