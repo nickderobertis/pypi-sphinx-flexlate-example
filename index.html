@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -61,6 +61,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <link rel="canonical" href="https://nickderobertis.github.io/pypi-sphinx-flexlate-example/index.html" />
@@ -330,10 +331,15 @@ upgrades will often have breaking changes.</p>
 <h2 id="developing">Developing<a class="headerlink" href="#developing" title="Permalink to this heading">¶</a></h2>
 <p>First, you need a couple global dependencies installed, see their documentation for details:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://pypa.github.io/pipx/installation/">pipx</a></p></li>
 <li><p><a class="reference external" href="https://direnv.net/docs/installation.html">direnv</a></p></li>
+<li><p><a class="reference external" href="https://asdf-vm.com/guide/getting-started.html">asdf</a></p></li>
 </ul>
-<p>Then clone the repo and run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code> and <code class="docutils literal notranslate"><span class="pre">mvenv</span> <span class="pre">sync</span> <span class="pre">dev</span></code>. Make your changes and then run <code class="docutils literal notranslate"><span class="pre">just</span></code> to run formatting,
+<p>Note that these tools require a UNIX-style shell, such as bash or zsh. If
+you are on Windows, you can use WSL or Git Bash. If you are using Pycharm,
+you can configure the built-in terminal to use Git Bash.</p>
+<p>Then clone the repo and run <code class="docutils literal notranslate"><span class="pre">direnv</span> <span class="pre">allow</span></code>. This will take a while on the first time
+to install the remaining dependencies.</p>
+<p>Make your changes and then run <code class="docutils literal notranslate"><span class="pre">just</span></code> to run formatting,
 linting, and tests.</p>
 <p>Develop documentation by running <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">docs</span></code> to start up a dev server.</p>
 <p>To run tests only, run <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">test</span></code>. You can pass additional arguments to pytest,
@@ -414,11 +420,11 @@ e.g. <code class="docutils literal notranslate"><span class="pre">just</span> <s
       <div class="md-footer-meta__inner md-grid">
         <div class="md-footer-copyright">
           <div class="md-footer-copyright__highlight">
-              &#169; Copyright 2022, Nick DeRobertis.
+              &#169; Copyright 2023, Nick DeRobertis.
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
