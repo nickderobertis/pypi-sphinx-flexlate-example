@@ -28,7 +28,7 @@ repository = "https://github.com/nickderobertis/pypi-sphinx-flexlate-example"
 documentation = "https://nickderobertis.github.io/pypi-sphinx-flexlate-example"
 
 [tool.poetry.dependencies]
-python = ">=3.7"
+python = ">=3.8"
 
 [tool.poetry.group.test.dependencies]
 pytest = "*"
