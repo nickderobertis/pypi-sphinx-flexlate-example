@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "pypi-sphinx-flexlate-example-lint"
+description = "Linting for pypi-sphinx-flexlate-example"
+version = "1.0.0"
+authors = ["Nick DeRobertis <derobertis.nick@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+pypi-sphinx-flexlate-example = {path = "../..", develop = true}
+flake8 = "*"
+mypy = "*"
