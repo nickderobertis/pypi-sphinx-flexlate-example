@@ -259,13 +259,25 @@
         </li>
         <li class="md-nav__item"><a href="#getting-started" class="md-nav__link">Getting Started</a>
         </li>
+        <li class="md-nav__item"><a href="#links" class="md-nav__link">Links</a>
+        </li>
         <li class="md-nav__item"><a href="#development-status" class="md-nav__link">Development Status</a>
         </li>
-        <li class="md-nav__item"><a href="#developing" class="md-nav__link">Developing</a>
+        <li class="md-nav__item"><a href="#developing" class="md-nav__link">Developing</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#initial-setup" class="md-nav__link">Initial Setup</a>
+        </li>
+        <li class="md-nav__item"><a href="#day-to-day-development" class="md-nav__link">Day to Day Development</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#conventional-commits-semantic-release" class="md-nav__link">Conventional Commits & Semantic Release</a>
+        </li>
+        <li class="md-nav__item"><a href="#pre-commit-hooks" class="md-nav__link">Pre-commit Hooks</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
         </li>
         <li class="md-nav__item"><a href="#author" class="md-nav__link">Author</a>
-        </li>
-        <li class="md-nav__item"><a href="#links" class="md-nav__link">Links</a>
         </li>
         <li class="md-nav__item"><a href="#tutorial-and-examples" class="md-nav__link">Tutorial and Examples</a>
         </li>
@@ -321,6 +333,11 @@
 <p>See a
 <a class="reference external" href="https://nickderobertis.github.io/pypi-sphinx-flexlate-example/tutorial.html">more in-depth tutorial here.</a></p>
 </section>
+<section id="links">
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h2>
+<p>See the
+<a class="reference external" href="https://nickderobertis.github.io/pypi-sphinx-flexlate-example/">documentation here.</a></p>
+</section>
 <section id="development-status">
 <h2 id="development-status">Development Status<a class="headerlink" href="#development-status" title="Permalink to this heading">¶</a></h2>
 <p>This project is currently in early-stage development. There may be
@@ -329,6 +346,8 @@ upgrades will often have breaking changes.</p>
 </section>
 <section id="developing">
 <h2 id="developing">Developing<a class="headerlink" href="#developing" title="Permalink to this heading">¶</a></h2>
+<section id="initial-setup">
+<h3 id="initial-setup">Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this heading">¶</a></h3>
 <p>First, you need a couple global dependencies installed, see their documentation for details:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://direnv.net/docs/installation.html">direnv</a></p></li>
@@ -339,21 +358,40 @@ you are on Windows, you can use WSL or Git Bash. If you are using Pycharm,
 you can configure the built-in terminal to use Git Bash.</p>
 <p>Then clone the repo and run <code class="docutils literal notranslate"><span class="pre">direnv</span> <span class="pre">allow</span></code>. This will take a while on the first time
 to install the remaining dependencies.</p>
+</section>
+<section id="day-to-day-development">
+<h3 id="day-to-day-development">Day to Day Development<a class="headerlink" href="#day-to-day-development" title="Permalink to this heading">¶</a></h3>
 <p>Make your changes and then run <code class="docutils literal notranslate"><span class="pre">just</span></code> to run formatting,
 linting, and tests.</p>
 <p>Develop documentation by running <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">docs</span></code> to start up a dev server.</p>
 <p>To run tests only, run <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">test</span></code>. You can pass additional arguments to pytest,
 e.g. <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">test</span> <span class="pre">-k</span> <span class="pre">test_something</span></code>.</p>
 <p>Prior to committing, you can run <code class="docutils literal notranslate"><span class="pre">just</span></code> with no arguments to run all the checks.</p>
+<section id="conventional-commits-semantic-release">
+<h4 id="conventional-commits-semantic-release">Conventional Commits &amp; Semantic Release<a class="headerlink" href="#conventional-commits-semantic-release" title="Permalink to this heading">¶</a></h4>
+<p>This project uses <a class="reference external" href="https://www.conventionalcommits.org/en/v1.0.0/">conventional commits</a>
+to power <a class="reference external" href="https://semantic-release.gitbook.io/semantic-release/">semantic release</a>. This means
+that when you commit, you should use the following format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span><span class="p">[</span><span class="n">optional</span> <span class="n">scope</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">feat:</span> <span class="pre">Add</span> <span class="pre">new</span> <span class="pre">feature</span></code> or <code class="docutils literal notranslate"><span class="pre">fix:</span> <span class="pre">Fix</span> <span class="pre">bug</span></code>.</p>
+<p>When creating a PR, please name the PR in this way as well so that the squashed
+commit from the PR will have a conventional commit message.</p>
+</section>
+<section id="pre-commit-hooks">
+<h4 id="pre-commit-hooks">Pre-commit Hooks<a class="headerlink" href="#pre-commit-hooks" title="Permalink to this heading">¶</a></h4>
+<p>This project uses Husky and Lint-staged to run pre-commit hooks. This means that
+when you commit, it will run <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">format</span></code> and <code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">strip</span></code> on the files
+you edited, and also check that your commit message is a conventional commit.</p>
+<p>If you are not able to commit, it is likely because your commit message is not
+in the conventional commit format.</p>
+</section>
+</section>
 </section>
 <section id="author">
 <h2 id="author">Author<a class="headerlink" href="#author" title="Permalink to this heading">¶</a></h2>
 <p>Created by Nick DeRobertis. MIT License.</p>
-</section>
-<section id="links">
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h2>
-<p>See the
-<a class="reference external" href="https://nickderobertis.github.io/pypi-sphinx-flexlate-example/">documentation here.</a></p>
 <p>For more information on getting started, take a look at the tutorial and examples.</p>
 </section>
 <section id="tutorial-and-examples">
