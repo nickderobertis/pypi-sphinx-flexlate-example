@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.79.0](https://github.com/nickderobertis/pypi-sphinx-flexlate-example/compare/v0.78.0...v0.79.0) (2023-01-28)
+
+
+### Features
+
+* Add a dummy change to trigger release ([2613a69](https://github.com/nickderobertis/pypi-sphinx-flexlate-example/commit/2613a69e27f04d5f1e5e522009040a8334ecbc2e))
+
 ## [0.78.0](https://github.com/nickderobertis/pypi-sphinx-flexlate-example/compare/v0.77.0...v0.78.0) (2023-01-28)
 
 
