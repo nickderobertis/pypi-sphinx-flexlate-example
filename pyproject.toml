@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pypi-sphinx-flexlate-example"
-version = "0.81.0"
+version = "0.82.0"
 description = "Example output for https://github.com/nickderobertis/copier-pypi-sphinx-flexlate"
 authors = ["Nick DeRobertis <derobertis.nick@gmail.com>"]
 readme = "README.md"
