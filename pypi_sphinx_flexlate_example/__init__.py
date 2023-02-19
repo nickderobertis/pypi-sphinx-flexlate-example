@@ -1,4 +1,4 @@
 """
 Example output for https://github.com/nickderobertis/copier-pypi-sphinx-flexlate
 """
-__version__ = "0.83.0"
+__version__ = "0.84.0"
