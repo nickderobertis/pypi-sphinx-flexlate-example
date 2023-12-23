@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_simple_example.py>`
+        :ref:`Go to the end <sphx_glr_download_auto_examples_simple_example.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -26,7 +26,7 @@ look.
 
 .. GENERATED FROM PYTHON SOURCE LINES 9-16
 
-.. code-block:: default
+.. code-block:: Python
 
 
     print("woo")
@@ -73,7 +73,7 @@ And a paragraph, then an equation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.490 seconds)
+   **Total running time of the script:** (0 minutes 0.322 seconds)
 
 
 .. _sphx_glr_download_auto_examples_simple_example.py:
@@ -82,7 +82,6 @@ And a paragraph, then an equation.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -90,13 +89,13 @@ And a paragraph, then an equation.
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: simple_example.py <simple_example.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: simple_example.ipynb <simple_example.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: simple_example.py <simple_example.py>`
 
 
 .. only:: html
